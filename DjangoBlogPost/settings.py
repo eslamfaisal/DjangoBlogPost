@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # my apps
     'personal',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,8 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTH_USER_MODEL = 'account.Account'
 
 WSGI_APPLICATION = 'DjangoBlogPost.wsgi.application'
 

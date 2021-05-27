@@ -1,12 +1,15 @@
 from django.shortcuts import render
 
-
 # Create your views here.
+from personal.models import Question
+
+
 def home_screen_view(request):
     print(request.headers)
 
+    questions = Question.objects.all()
     context = {
-        'some_string': 'this is some string that i passing to he view'
+        'questions': questions
     }
 
     return render(request, 'personal/home.html', context)

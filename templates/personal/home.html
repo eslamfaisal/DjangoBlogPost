@@ -6,8 +6,10 @@
         <h1>this is body</h1>
         <p> prargraph</p>
 
-        {{ some_string  }}
-    {% include 'personal/snippets/body_snippets.html' %}
+        {{ some_string }}
+        {% for qustion in questions %}
+            {% include 'personal/snippets/body_snippets.html' with value=qustion %}
+        {% endfor %}
     </div>
 
 {% endblock %}
