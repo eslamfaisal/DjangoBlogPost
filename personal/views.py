@@ -1,15 +1,15 @@
 from django.shortcuts import render
 
 # Create your views here.
-from personal.models import Question
+from account.models import Account
 
 
 def home_screen_view(request):
     print(request.headers)
 
-    questions = Question.objects.all()
+    accounts = Account.objects.all()
     context = {
-        'questions': questions
+        'accounts': accounts
     }
 
     return render(request, 'personal/home.html', context)

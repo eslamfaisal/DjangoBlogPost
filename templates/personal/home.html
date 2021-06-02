@@ -7,8 +7,8 @@
         <p> prargraph</p>
 
         {{ some_string }}
-        {% for qustion in questions %}
-            {% include 'personal/snippets/body_snippets.html' with value=qustion %}
+        {% for account in accounts %}
+            <p>{{ account }}</p>
         {% endfor %}
     </div>
 
